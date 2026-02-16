@@ -18,8 +18,8 @@ Build a responsive article preview component that:
 
 ### Links
 
-- Solution URL: [Add your solution URL here](https://github.com/ParthaDey5/article-preview-component-master)
-- Live Site URL: [Add your live site URL here](https://article-preview-component-master-green.vercel.app)
+- Solution URL: [https://github.com/ParthaDey5/article-preview-component-master]
+- Live Site URL: [https://article-preview-component-master-green.vercel.app]
 
 ## My Process
 
@@ -122,8 +122,8 @@ This project was developed with AI assistance following structured learning prin
 ## Author
 
 - Website - [Add your website here](https://www.your-site.com)
-- Frontend Mentor - [@ParthaDey5](https://www.frontendmentor.io/profile/ParthaDey5)
-- GitHub - [@ParthaDey5](https://github.com/ParthaDey5)
+- Frontend Mentor - [https://www.frontendmentor.io/profile/ParthaDey5]
+- GitHub - [https://github.com/ParthaDey5]
 
 ## Acknowledgments
 
