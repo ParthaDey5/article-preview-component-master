@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/output.css">
+
+  <title>Frontend Mentor | Article preview component</title>
+
+
+</head>
+
+<body>
+  
+  <div class="article-card">
+    <div class="article-card__image"></div>
+    <div class="article-card__content">
+      <h2 class="article-card__title">Shift the overall look and feel by adding these wonderful
+        touches to furniture in your home</h2>
+      <p class="article-card__description">Ever been in a room and felt like something was missing? Perhaps
+        it felt slightly bare and uninviting. I’ve got some simple tips
+        to help you make any room feel complete.
+      </p>
+      <div class="article-card__footer">
+        <div class="article-card__author">
+          <span class="article-card__author-avatar"></span>
+          <div class="article-card__author-info ">
+            <span class="article-card__author-name">Michelle Appleton</span>
+            <span class="article-card__author-date ">28 Jun 2020</span>
+          </div>
+        </div>
+        <button class="article-card__share-btn "></button>
+        <div class="article-card__share-dropdown opacity-0 pointer-events-none">
+          <span class="article-card__share-text">SHARE</span>
+          <div class="article-card__social-links">
+            <a href="#" class="article-card__social-link facebook">
+              <img src="../images/icon-facebook.svg" alt="Facebook">
+            </a>
+            <a href="#" class="article-card__social-link twitter">
+              <img src="../images/icon-twitter.svg" alt="Twitter">
+            </a>
+            <a href="#" class="article-card__social-link pinterest">
+              <img src="../images/icon-pinterest.svg" alt="Pinterest">
+            </a>
+          </div>
+          <button class="article-card__share-btn2 lg:hidden "></button>
+        </div> 
+      </div>
+    </div>
+  </div>
+
+<script>
+  const shareDropdown = document.querySelector('.article-card__share-dropdown');
+  const shareButton = document.querySelector('.article-card__share-btn')
+  const shareButton2 = document.querySelector('.article-card__share-btn2')
+
+  shareButton.addEventListener('click',()=>{
+    shareDropdown.classList.toggle('opacity-0');
+    shareDropdown.classList.toggle('pointer-events-none');
+    
+    // Change button background color based on dropdown visibility
+    if (shareDropdown.classList.contains('opacity-0')) {
+      shareButton.classList.remove('active');
+    } else { 
+      shareButton.classList.add('active');
+    }
+  })
+  shareButton2.addEventListener('click',()=>{
+    shareDropdown.classList.toggle('opacity-0');
+    shareDropdown.classList.toggle('pointer-events-none');
+    
+    // Change button background color based on dropdown visibility
+    if (shareDropdown.classList.contains('opacity-0')) { 
+      shareButton2.classList.remove('active');
+    } else {  
+      shareButton2.classList.add('active');
+    }
+  })
+</script>
+</body>
+
+</html>

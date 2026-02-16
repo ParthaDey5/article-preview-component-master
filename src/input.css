@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global outline for debugging */
+* {
+  /* outline: 1px solid red; */
+}
+
+:root{
+    --color-Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --color-Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --color-Grayish-Blue: hsl(212, 23%, 69%);
+    --color-Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+html{
+    @apply text-[1.25vw];
+    font-family: 'Manrope', sans-serif;
+}
+body{
+    @apply relative col-x-center max-w-full w-screen min-h-screen lg:aspect-[1440/800] aspect-[375/667] ;
+    background-color: var(--color-Light-Grayish-Blue);
+}
+.article-card{
+    @apply lg:rounded-[0.5rem] rounded-[2rem] lg:w-[40.4rem] w-[88%] lg:h-[15.75rem] h-[107rem] lg:row-y-start col-x-center lg:mt-[14.3rem] mt-[16rem] shadow-6xl bg-white ;
+}
+.article-card__image{
+    @apply lg:w-[39%] w-full lg:h-full h-[55%] bg-[url(../images/drawers.jpg)] lg:bg-[length:22rem_15.75rem]  bg-cover bg-center  lg:rounded-tl-[0.5rem] lg:rounded-bl-[0.5rem] lg:rounded-tr-none rounded-tr-[2rem] rounded-tl-[2rem] ;
+}
+.article-card__content{
+    @apply lg:w-[61%] w-full  lg:px-[2.3rem] lg:py-[2rem] lg:col-x-start  col-x-center lg:gap-y-[0.5rem] gap-y-[3rem] lg:mt-0 mt-[7rem] ;
+}
+
+.article-card__title{
+    @apply lg:text-[1.125rem] text-[3.5rem] lg:px-0 px-[7rem] leading-[140%] lg:text-shadow-xs text-shadow-md font-extrabold;
+    color: var(--color-Very-Dark-Grayish-Blue);
+}
+.article-card__description {
+    @apply lg:text-[0.74rem] text-[2.875rem] lg:px-0 px-[6.8rem] lg:text-shadow text-shadow-xs leading-[150%];
+    color: var(--color-Grayish-Blue);
+}
+.article-card__footer {
+    @apply relative w-full lg:h-[3.65rem] h-[13rem] row-y-center row-x-between lg:px-0 px-[7rem] lg:mt-0 mt-[1.4rem] ;
+}
+.article-card__author-name {
+    @apply text-shadow-xs;
+}
+.article-card__author-info {
+    @apply lg:text-[0.73rem] text-[2.73rem] font-extrabold col-x-start;
+}
+.article-card__author{
+    @apply h-full row-y-center lg:gap-x-[0.8rem] gap-x-[3.9rem] ;
+}
+.article-card__author-avatar{
+    @apply lg:w-[2.2rem] w-[8rem] aspect-square bg-[url(../images/avatar-michelle.jpg)] bg-cover bg-center rounded-full ;
+}
+.article-card__author-date {
+    @apply font-bold;
+    color: var(--color-Grayish-Blue);
+}
+.article-card__share-btn {
+    @apply lg:w-[1.7rem] lg:h-[1.7rem] w-[7.5rem] h-[7.5rem] rounded-full lg:bg-[length:0.8rem_0.65rem] bg-[length:3rem_2.5rem] bg-center bg-no-repeat transition-colors cursor-pointer ;
+    background-color: var(--color-Light-Grayish-Blue);
+    background-image: url('../images/icon-share.svg');
+}
+.article-card__share-btn2 {
+    @apply lg:w-[1.7rem] lg:h-[1.7rem] w-[7.5rem] h-[7.5rem] rounded-full lg:bg-[length:0.8rem_0.65rem] bg-[length:3.5rem_2.5rem] bg-center bg-no-repeat transition-colors cursor-pointer ;
+    background-color: var(--color-Desaturated-Dark-Blue);
+    background-image: url('../images/icon-share-white.svg');
+}
+
+.article-card__share-btn.active {
+    @media (min-width: 1024px) {
+        background-color: var(--color-Desaturated-Dark-Blue);
+        background-image: url('../images/icon-share-white.svg');
+    }
+}
+.article-card__share-dropdown{
+    @apply absolute lg:w-[13.6rem] w-full lg:h-[3rem] h-full lg:-right-[14.8rem] lg:-translate-y-[4.05rem] lg:-translate-x-[8.7rem] -translate-x-[7rem] bg-[hsl(217,19%,35%)] text-white  lg:rounded-[0.5rem] rounded-t-none rounded-b-[2rem] shadow-5xl lg:row-x-center row-x-between lg:px-0 px-[7rem] row-y-center lg:gap-x-[1.8rem] z-10 ;
+}
+.article-card__share-dropdown::after{
+    content: '';
+    position: absolute;
+    bottom: -0.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 0.6rem solid transparent;
+    border-right: 0.6rem solid transparent;
+    border-top: 0.6rem solid hsl(217, 19%, 35%);
+}
+.article-card__share-text{
+    @apply lg:text-[0.7rem] text-[2.7rem] lg:tracking-[0.3rem] tracking-[1rem] font-extrabold ;
+    color: var(--color-Grayish-Blue);
+}
+.article-card__social-links{
+    @apply row-x-center lg:gap-x-[1rem] gap-x-[4rem] -translate-x-[4rem] lg:-translate-x-[0.5rem] ;
+}
+.article-card__social-link img{
+    @apply lg:w-[1rem] w-[4rem] h-[4rem] lg:h-[1rem];
+}
